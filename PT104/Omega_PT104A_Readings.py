@@ -18,8 +18,8 @@ test_duration_s = 120
 now = datetime.now()
 current_date_time = now.strftime('%d%b%Y_%H%M')
 test = 'PT104A_Temperature Measurements_40 deg C'
-file_name = f'results/PT104A Results_{current_date_time}_{test}.csv'
-notes = 'Testing with PT100 Ohm RTD and PT104A Daq (Equip-00146)'
+file_name = f'results/PT104A Results_{current_date_time}_{test}.csv'  # Create results folder before running script
+notes = 'Add notes here'
 
 try:
 
