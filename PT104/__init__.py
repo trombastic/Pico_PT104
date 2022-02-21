@@ -161,6 +161,7 @@ class PT104(object):
         enum_string = create_string_buffer(256)
 
         libusbpt104.UsbPt104Enumerate(enum_string, enum_len, communication_type)
+        print(enum_string.value)
         return enum_string.value
 
     @property
@@ -289,6 +290,7 @@ class PT104(object):
         self.channels[channel]['low_pass_filter'] = low_pass_filter
         if not self.is_connected:
             # change config only
+            print('device not connected')
             return False
 
         cs = libusbpt104.UsbPt104SetChannel(self._handle,
