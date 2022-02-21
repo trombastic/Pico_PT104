@@ -7,7 +7,7 @@ import csv
 
 daq = PT104()
 print('waiting for connection...')
-daq.connect('GQ840/197')  # ID of Diality's PT104A
+daq.connect('GQ840/197')  # ID of specific PT104A device (use discover devices method to return device name)
 print('device connected')
 daq.set_channel(Channels.CHANNEL_1, DataTypes.PT100, Wires.WIRES_4)
 # daq.set_channel(Channels.CHANNEL_2, DataTypes.PT100, Wires.WIRES_4)
